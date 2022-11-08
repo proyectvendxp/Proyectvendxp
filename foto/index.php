@@ -33,7 +33,7 @@
     </form>
 </div>
   
-<!-- Configure a few settings and attach camera -->
+<!-- Attach camera #FixByLuis -->
 <script language="JavaScript">
     Webcam.set({
         width: 490,

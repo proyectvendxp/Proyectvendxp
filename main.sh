@@ -22,7 +22,7 @@ echo "Copyright all rights reserved 2022, MIT LICENSE"
 echo "You're free to use this software for your own, you can NOT distributed by your name and obtain earnings"
 echo "Twitter: @yt1luiscraft"
 echo "Discord: Luis!#5902"
-echo "Telegram: @L9799_1"
+echo "Telegram: @L9799"
 echo "Web: https://luisweb.cf"
 sleep 3
 echo Starting webserver...

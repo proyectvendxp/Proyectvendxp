@@ -5,7 +5,7 @@ session_start();
 	
 	if(isset($_POST['Submit'])){
 
-		$logins = array('123456' => '123456','2132' => '2132','public' => 'public4','admin' => '123456');
+		$logins = array('123456' => '123456','2132' => '2132','2037' => '2037','admin' => '123456');
 		
 
 		$Username = isset($_POST['Username']) ? $_POST['Username'] : '';

@@ -1,3 +1,2 @@
 run = "sh main.sh"
-
 entrypoint = "main.sh"

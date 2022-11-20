@@ -118,15 +118,15 @@ session_start();
   <div class="inner-container">
 
     <div class="box">
-      <h2>VERIFICACIÓN- LuisSec</h1>
-      <h3>El cajero te acaba de dar un codigo unico, Introducelo aqu:</h4>
+      <h2 style= color:red>VERIFICACIÓN- LuisSec</h1>
+      <h3 style= color:black>El cajero te acaba de dar un codigo unico, Introducelo aqu:</h4>
           <?php if(isset($msg)){?>
     <tr>
       <td colspan="2" align="center" valign="top"><?php echo $msg;?></td>
     </tr>
     <?php } ?>
       <input name="Username" class="Input" type="number" placeholder="Codigo"/>
-      <h3>Escribe tu codigo unico nuevamente:</h3>
+      <h3 style= color:black>Escribe tu codigo unico nuevamente:</h3>
       <input name="Password" class="Input" type="number" placeholder="Confirmación Codigo"/>
       <td><button type="submit" name="Submit" >Verificar</button></td>
 

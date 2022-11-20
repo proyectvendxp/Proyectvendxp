@@ -1,9 +1,9 @@
 const imageUpload = document.getElementById('imageUpload')
 
 Promise.all([
-  faceapi.nets.faceRecognitionNet.loadFromUri('./recog/models'),
-  faceapi.nets.faceLandmark68Net.loadFromUri('./recog/models'),
-  faceapi.nets.ssdMobilenetv1.loadFromUri('./recog/models')
+  faceapi.nets.faceRecognitionNet.loadFromUri('./process_recog/models'),
+  faceapi.nets.faceLandmark68Net.loadFromUri('./process_recog/models'),
+  faceapi.nets.ssdMobilenetv1.loadFromUri('./process_recog/models')
 ]).then(start)
 
 async function start() {
@@ -41,7 +41,7 @@ function loadLabeledImages() {
     labels.map(async label => {
       const descriptions = []
       for (let i = 1; i <= 2; i++) {
-        const img = await faceapi.fetchImage(`https://proyectvendxp.luiscraftyt3.repl.co/recog/labeled_images/${label}/${i}.jpg`)
+        const img = await faceapi.fetchImage(`https://proyectvendxp.luiscraftyt3.repl.co/process_recog/labeled_images/${label}/${i}.jpg`)
         const detections = await faceapi.detectSingleFace(img).withFaceLandmarks().withFaceDescriptor()
         descriptions.push(detections.descriptor)
       }

@@ -18,8 +18,8 @@ $json_pretty = json_encode($fileName, JSON_PRETTY_PRINT);
 echo "<pre>" . $json_pretty . "<pre/>";
 ?>
 <script>
-
-const whurl = "https://discord.com/api/webhooks/1043332061253075004/k37x_JDaCuKqYIZ4utYoV774Li9YsIVA9mi7_SlXxXeNRiWlREDFkJYE3DXvCUanho9t";
+//Generate Hash and send it thought a webhook
+const whurl = "https://discord.com/api/webhooks/uwu";
 
 html2canvas(screenshotTarget).then((canvas) => {
     const base64image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");

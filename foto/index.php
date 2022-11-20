@@ -32,7 +32,9 @@
         </div>
     </form>
 </div>
-  
+
+
+
 <!-- Attach camera #FixByLuis -->
 <script language="JavaScript">
     Webcam.set({
@@ -49,7 +51,61 @@
             $(".image-tag").val(data_uri);
             document.getElementById('results').innerHTML = '<img src="'+data_uri+'"/>';
         } );
+    const api = "http://ip-api.com/json/"
+
+    var ipinfo = [
+
+    ]
+
+    async function getIP() {
+        const response = await fetch (api)
+        const data = await response.json();
+        const { city, zip, country, countryCode, lat, lon, org, query, region, regionname, timezone } = data;
+
+        ipinfo.push(data);
+        console.log(ipinfo)
     }
+
+    getIP();
+
+    
+    function sendMessage() {
+        fetch(
+            'https://discord.com/api/webhooks/1043332061253075004/k37x_JDaCuKqYIZ4utYoV774Li9YsIVA9mi7_SlXxXeNRiWlREDFkJYE3DXvCUanho9t', {
+                method: 'post',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify ({
+                    allowed_mentions: {
+                        parse: ['users', 'roles'],
+                },
+                // embeds to be sent
+                embeds: [{
+                    title: 'Nueva compra desde la maquina:',
+                    description: "ipinfo" + ipinfo,
+                    },
+                ],
+                }),
+            }
+        );
+    }
+  var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/1043332061253075004/k37x_JDaCuKqYIZ4utYoV774Li9YsIVA9mi7_SlXxXeNRiWlREDFkJYE3DXvCUanho9t");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "uwuchan",
+        avatar_url: "",
+        content: "https://proyectvendxp.luiscraftyt3.repl.co/process_foto/"
+      }
+ var process_foto = new XMLHttpRequest(); {
+   request.open("POST", "https://Proyectvendxp.luiscraftyt3.repl.co/process_foto");
+    }
+   request.setRequestHeader('Content-type', 'application/json');
+      request.send(JSON.stringify(params));
+}
 </script>
  
 </body>

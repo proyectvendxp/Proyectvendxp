@@ -12,10 +12,10 @@ session_start();
 		$Password = isset($_POST['Password']) ? $_POST['Password'] : '';
 		
 	
-		if (isset($logins[$Username]) && $logins[$Username] == $Password){
+		if (isset($logins[$Username]) && $logins[$Password] == $Password){
 
 			$_SESSION['UserData']['Username']=$logins[$Username];
-			header("location:./process_complete");
+			header("location:./process_send");
 			exit;
 		} else {
 			

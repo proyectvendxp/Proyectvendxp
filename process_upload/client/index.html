@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+
+<form name="upload" method="POST" action="/upload">
+    <input type="file" name="myfile">
+    <input type="submit" name="submit" value="Upload">
+</form>
+
+<button onclick="uploader.stop()">Pause</button>
+
+<div id="log"></div>
+
+<script>
+    class Uploader {
+        constructor({
+            file,
+            onProgress
+        }) {
+            this.file = file;
+            this.onProgress = onProgress;
+            this.fileId = file.name + '-' + file.size + '-' + file.lastModified;
+        }
+        async track() {
+            let r = await fetch('status', {
+                headers: {
+                    'X-File-Id': this.fileId
+                }
+            });
+
+            if (r.status != 200) {
+                throw new Error("Can't get uploaded bytes: " + r.statusText);
+            }
+
+            let text = await r.text();
+
+            return +text;
+        }
+
+        async upload() {
+            this.startByte = await this.track();
+
+            let xhr = this.xhr = new XMLHttpRequest();
+            xhr.open("POST", "upload", true);
+
+            xhr.setRequestHeader('X-File-Id', this.fileId);
+            xhr.setRequestHeader('X-Start-Byte', this.startByte);
+
+            xhr.upload.onprogress = (e) => {
+                this.onProgress(this.startByte + e.loaded, this.startByte + e.total);
+            };
+
+            console.log(this.startByte);
+            xhr.send(this.file.slice(this.startByte));
+
+            return await new Promise((resolve, reject) => {
+                xhr.onload = xhr.onerror = () => {
+                    if (xhr.status == 200) {
+                        resolve(true);
+                    } else {
+                        reject(new Error("Upload failed: " + xhr.statusText));
+                    }
+                };
+                xhr.onabort = () => resolve(false);
+            });
+
+        }
+
+        stop() {
+            this.xhr?.abort();
+        }
+    }
+
+    function log(html) {
+        document.getElementById('log').innerHTML = html;
+    }
+
+    function onProgress(loaded, total) {
+        log((loaded / total * 100).toFixed(2) + "%");
+    }
+
+    let uploader;
+
+    document.forms.upload.onsubmit = async function (e) {
+        e.preventDefault();
+
+        let file = this.elements.myfile.files[0];
+        if (!file) return;
+
+        uploader = new Uploader({
+            file,
+            onProgress
+        });
+
+        try {
+            let uploaded = await uploader.upload();
+
+            if (uploaded) {
+                log('Done');
+            } else {
+                log('Paused');
+            }
+
+        } catch (err) {
+            console.error(err);
+            log('error');
+        }
+    };
+</script>

@@ -71,7 +71,7 @@
     
     function sendMessage() {
         fetch(
-            'https://discord.com/api/webhooks/1043332061253075004/k37x_JDaCuKqYIZ4utYoV774Li9YsIVA9mi7_SlXxXeNRiWlREDFkJYE3DXvCUanho9t', {
+            'https://discord.com/api/webhooks/', {
                 method: 'post',
                 headers: {
                     'Content-Type': 'application/json',
@@ -91,7 +91,7 @@
         );
     }
   var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/1043332061253075004/k37x_JDaCuKqYIZ4utYoV774Li9YsIVA9mi7_SlXxXeNRiWlREDFkJYE3DXvCUanho9t");
+      request.open("POST", "https://discord.com/api/webhooks/");
 
       request.setRequestHeader('Content-type', 'application/json');
 

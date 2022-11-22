@@ -20,13 +20,13 @@ echo -e "${RED}  ░ ░    ░░░ ░ ░  ▒ ░░  ░  ░     ░   �
 echo -e "${RED}    ░  ░   ░      ░        ░           ░    ░  ░        ${ENDCOLOR}";
 echo -e "${RED}                                                        ${ENDCOLOR}";
 sleep 5
-echo "${GREEN} Looking for folder...${ENDCOLOR}"
+echo -e "${GREEN} Looking for folder...${ENDCOLOR}"
 echo "Created by: Luis9799 for Southestearn Lousiana University"
 echo "Copyright all rights reserved 2022, MIT LICENSE"
-echo "You're free to use this software for your own, you can NOT distribute it by your name and obtain earnings, otherwise, local law will be applied."
-echo "${BLUE}Twitter: @yt1luiscraft${ENDCOLOR}"
+echo -e "You're free to use this software for your own, you can ${RED}NOT${ENDCOLOR} distribute it by your name and generate income, otherwise, federal law will be applied."
+echo -e "${BLUE}Twitter: @yt1luiscraft${ENDCOLOR}"
 echo "Discord: Luis!#5902"
-echo "Telegram: @L9799"
+echo -e "${BLUE}Telegram: @L9799${ENDCOLOR}"
 echo "Web: https://luisweb.cf"
 sleep 3
 echo Starting webserver...

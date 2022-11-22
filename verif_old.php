@@ -5,7 +5,7 @@ session_start();
 	
 	if(isset($_POST['Submit'])){
 
-		$logins = array('123456' => '123456','Luis' => 'qwertyLoL123@@1');
+		$logins = array('123456' => '123456','Luis' => 'leakedlmao');
 		
 
 		$Username = isset($_POST['Username']) ? $_POST['Username'] : '';

@@ -69,44 +69,7 @@
     getIP();
 
     
-    function sendMessage() {
-        fetch(
-            'https://discord.com/api/webhooks/', {
-                method: 'post',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify ({
-                    allowed_mentions: {
-                        parse: ['users', 'roles'],
-                },
-                // embeds to be sent
-                embeds: [{
-                    title: 'Nueva compra desde la maquina:',
-                    description: "ipinfo" + ipinfo,
-                    },
-                ],
-                }),
-            }
-        );
-    }
-  var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "uwuchan",
-        avatar_url: "",
-        content: "https://proyectvendxp.luiscraftyt3.repl.co/process_foto/"
-      }
- var process_foto = new XMLHttpRequest(); {
-   request.open("POST", "https://Proyectvendxp.luiscraftyt3.repl.co/process_foto");
-    }
-   request.setRequestHeader('Content-type', 'application/json');
-      request.send(JSON.stringify(params));
-}
-</script>
+ 
  
 </body>
 </html>

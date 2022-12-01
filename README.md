@@ -1,5 +1,5 @@
 
-# Proyectvendxp
+# 🐥PIO Tech App
 
 A self-vending software for Southestearn Lousiana University Proyect in order to 
 get rid of lines and wating time loss as a customer coded in PHP, HTML, CSS, Bash. This was mainly developed as a proyect, is NOT used nowadays, however in the near future it will be relased to production, until is finished, you are not able to distribute this software unless you got permission, law will be applied in case of.

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script defer src="./process_recog/scripts/face-api.min.js"></script>
   <script defer src="./process_recog/scripts/script.js"></script>
-  <title>Recog</title>
+  <title>Client_Recognition_System</title>
   <style>
     body {
       margin: 0;

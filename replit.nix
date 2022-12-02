@@ -4,3 +4,4 @@
 pkgs.bashInteractive
     ];
 }
+//Nix Config

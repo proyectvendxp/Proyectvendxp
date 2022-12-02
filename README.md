@@ -1,18 +1,20 @@
 
-# Proyectvendxp
-
+# 🐥PIO Tech App
+P= Proyect
+I= Infrastructural
+O= Optimizer
 A self-vending software for Southestearn Lousiana University Proyect in order to 
-get rid of lines and wating time loss as a customer coded in PHP, HTML, CSS, Bash. This was mainly developed as a proyect, is NOT used nowadays, however in the near future it will be relased to production, until is finished, you are not able to distribute this software unless you got permission, law will be applied in case of.
+get rid of lines and wating time loss as a customer coded in PHP, HTML, CSS, Bash. This was mainly developed as a proyect, is NOT used nowadays, however in the near future it will be relased to production, until is finished, you are not able to distribute this software unless you get special permission,in case of, federal law will be applied.
 
 
 ## Authors
 
 - [@LUIS9799](https://www.github.com/LUIS9799)
-
+- [@CristianMelo](https://github.com/Cristi4nmer0merit0)
 
 ## How to run?
 
-Run for starting webserver
+Run for starting webserver (DEV)
 ```bash
   sh main.sh
 ```

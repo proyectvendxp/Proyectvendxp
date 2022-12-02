@@ -36,12 +36,12 @@ async function start() {
 }
 
 function loadLabeledImages() {
-  const labels = ['Jeronimo_Orjuela', 'Uribe', 'Pablo_Carrasco']
+  const labels = ['Jeronimo_Orjuela', 'Uribe', 'Pablo_Carrasco', 'Cristian_Gonzales']
   return Promise.all(
     labels.map(async label => {
       const descriptions = []
       for (let i = 1; i <= 2; i++) {
-        const img = await faceapi.fetchImage(`https://proyectvendxp.luiscraftyt3.repl.co/process_recog/labeled_images/${label}/${i}.jpg`)
+        const img = await faceapi.fetchImage(`https://piotech.luisweb.cf/process_recog/labeled_images/${label}/${i}.jpg`)
         const detections = await faceapi.detectSingleFace(img).withFaceLandmarks().withFaceDescriptor()
         descriptions.push(detections.descriptor)
       }

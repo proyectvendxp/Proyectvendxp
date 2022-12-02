@@ -1,6 +1,5 @@
 echo Starting...
 sleep 1.5
-cd Site
 sleep 1
 BLUE="\e[34m"
 RED="\e[31m"
@@ -18,6 +17,7 @@ echo -e "${RED}    ░  ░   ░      ░        ░           ░    ░  ░ 
 echo -e "${RED}                                                        ${ENDCOLOR}";
 sleep 5
 echo -e "${GREEN} Looking for folder...${ENDCOLOR}"
+sleep 2
 echo "Created by: Luis9799 for Southestearn Lousiana University"
 echo "Copyright all rights reserved 2022, MIT LICENSE"
 echo -e "You're free to use this software for your own, you can ${RED}NOT${ENDCOLOR} distribute it by your name and generate income, otherwise, federal law will be applied."

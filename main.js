@@ -14,7 +14,7 @@ runner = require("child_process");
 const rateLimit = require("express-rate-limit");
 	const limiter = rateLimit({
 		windowMs: 60 * 1000, // 1 min
-		max: 99999, // limitar IPs cada 300 requests
+		max: 300, // limitar IPs cada 300 requests
 		message: "Su IP fue bloqueada con el fin de evitar que la web caiga, pues su trafico es sospechoso, si considera esto un error considere reportarlo a soporte@luisweb.cf o admin@luisweb.cf - LuisSec" //Añadir mensaje de error cuando esta activo
 	});
 	app.use(limiter);

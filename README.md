@@ -4,7 +4,7 @@ P= Proyect
 I= Infrastructural
 O= Optimizer
 A self-vending software for Southestearn Lousiana University Proyect in order to 
-get rid of lines and wating time loss as a customer coded in PHP, HTML, CSS, Bash. This was mainly developed as a proyect, is NOT used nowadays, however in the near future it will be relased to production, until is finished, you are not able to distribute this software unless you get special permission,in case of, federal law will be applied.
+get rid of lines and wating time loss as a customer coded in PHP, HTML, CSS, Bash. This was mainly developed as a proyect, is NOT used nowadays, however in the near future it will be relased to production, until is finished, you are not able to distribute this software unless you get an especial permission,in case of, federal law will be applied.
 
 
 ## Authors
